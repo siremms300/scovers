@@ -1,0 +1,280 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+
+.square{
+    border-radius: 0px
+}
+
+.jumbotron{
+    background-image: linear-gradient(to right, #007bff, #000); 
+    color: #fff;
+    min-height: 100px;
+}
+
+.pointer{
+    cursor: pointer;
+} 
+
+
+
+
+
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+	--mainColor: #29335c;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #db2b39;
+	--textColor: #eee;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 2rem;
+    background-color: #eee;
+    /* color: var(--textColor); */
+    /* display: { xs: 'none', md: 'flex' } */
+    font-family: monospace;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    color: #2980b9;
+    text-decoration: none; 
+
+    position: sticky;
+    /* position: fixed; */ 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); /* Add box shadow */
+}
+
+.description-text {
+	background-color: #f4f4f4; /* Light grey background color */
+	padding: 10px; /* Add some padding for better visual separation */
+}   
+
+.headerSearch {
+  height: 50px;
+  background-color: white;
+  border: 3px solid #82a2fa;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: space-around;
+  border-radius: 5px;
+  position: relative;
+  border-radius: 30px;
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1000px; /* Set a maximum width as needed for larger screens */
+}
+
+.headerSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1; /* Make the button item take up available space */
+}
+
+
+.headerSearchInput {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 16px;
+	outline: none !important;
+	border: none;
+	border-radius: 30px;
+} 
+
+
+
+.headerBtn {
+    background-color: rgb(27, 158, 202); 
+    color: white; /* Text color */
+    padding: 5px 10px; /* Adjust padding as needed */
+    border: none;
+	margin-top: 2px;
+	margin-bottom: 2px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold; 
+	height: 50px;
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Hover effect for the button */
+.headerBtn:hover {
+    background-color: var(--mainColorLight); /* Change to the color you prefer on hover */
+} 
+
+/* HOW IT WORKS STYLING */ 
+
+.section {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+    padding: 1rem 0;
+}
+
+.category .box-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.category .box-container .box {
+    width: 5rem;
+    height: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px grey;
+    border: var(--border);
+    margin: 2rem;
+    padding: 1rem;
+    backdrop-filter: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.category .box-container .box img {
+    height: 3rem;
+    width: 4rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    color: var(--black);
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.category .box-container .box h3 {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.category .box-container .box span {
+    color: var(--light-color);
+    font-size: 1rem;
+}
+
+.category .box-container .box:hover {
+    background-color: #c7e7fc;
+    transition: 0.5s ease;
+}
+
+/* Media query to adjust layout on smaller screens */
+@media (max-width: 768px) {
+    .category .box-container {
+        justify-content: flex-start;
+        overflow-x: hidden;
+    }
+    
+    .category .box-container .box {
+        margin: 15px; /* Reduced margin for 15px spacing on mobile */
+    }
+}
+
+
+/* HOW IT WORKS END */
+
+
+nav a {
+	margin: 0 1rem;
+	color: #2980b9;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #2980b9;
+	visibility: hidden;
+	opacity: 0; 
+	font-size: 1.8rem;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		/* background-color: var(--mainColor); */
+        background-color: #eee;
+		transition: 1s;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+
+    .footer-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+
+    .footer-icons > * {
+        margin-bottom: 10px !important; /* Adjust the margin to your preferred vertical spacing */
+    }
+
+} 
+
